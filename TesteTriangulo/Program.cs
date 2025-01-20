@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 
 namespace TesteTriangulo
 {
@@ -16,6 +17,16 @@ namespace TesteTriangulo
 
             Console.Write("Digite o valor do lado C: ");
             ladoC = Convert.ToInt32(Console.ReadLine());
+
+            if ((ladoA < ladoB + ladoC) && (ladoB < ladoA + ladoC) && (ladoC < ladoA + ladoB))
+            {
+                Console.WriteLine("Os valores informados formam um triângulo.");
+            }
+            else
+            {
+                Console.WriteLine("Os valores informados não formam um triângulo.");
+            }
+
 
         }
     }
